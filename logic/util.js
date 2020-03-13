@@ -27,7 +27,19 @@ function Util() {
       }
   }
 
-     return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput};
+  function calculateTotalDistance(distancesArray) {
+      let totalDistance = 0;
+      let distance;
+      for (distance of distancesArray) {
+         if (distance < 0) {
+            continue;
+         }
+         totalDistance += distance;
+      }
+      return totalDistance;
+   }
+
+   return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput, calculateTotalDistance};
 
 }
 
