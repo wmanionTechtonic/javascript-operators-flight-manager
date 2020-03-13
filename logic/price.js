@@ -29,7 +29,11 @@ function Prices() {
         return finalPrice.toFixed(2);
     }
 
-    return {calculateFinalPrice, calculateDefaultFinalPrice};
+    function calculateTotalFinalPrice(seats, passengerType, flightType, basePrice) {
+        return seats * calculateDefaultFinalPrice(basePrice, passengerType, flightType);
+    }
+
+    return {calculateFinalPrice, calculateDefaultFinalPrice, calculateTotalFinalPrice};
 
 }
 
