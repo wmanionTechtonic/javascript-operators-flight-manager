@@ -39,7 +39,15 @@ function Util() {
       return totalDistance;
    }
 
-   return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput, calculateTotalDistance};
+   function calculateBonusPoints(businessDistancesArray, economyDistancesArray, businessBonus, economyBonus) {
+      let totalBusinessDistance = calculateTotalDistance(businessDistancesArray);
+      let totalEconomyDistance = calculateTotalDistance(economyDistancesArray);
+      let points = (businessBonus * totalBusinessDistance)/100 + (economyBonus * totalEconomyDistance)/100;
+      return points;
+   }
+
+   return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput, 
+          calculateTotalDistance, calculateBonusPoints};
 
 }
 
