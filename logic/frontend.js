@@ -12,7 +12,9 @@ function onCalculateNumberOfFlights() {
           " flight(s) to carry " + passengers + " passengers";
     } catch (error) {
         document.getElementById('flights').innerHTML = error; 
-    } 
+    } finally {
+        console.log("Passengers: " + passengers + ", Capacity: " + capacity );
+    }
 }
 
 function onCalculateTotalFinalPrice(object) {
@@ -94,7 +96,7 @@ function onCalculatePassengers() {
     let passengers5 = parseInt(document.getElementById("passengers5").value);
 
     let passengersArray = [passengers1, passengers2, passengers3, passengers4, passengers5];
-    calculatedPassengers = Util().calculateTotalNumberOfPassengers(passengersArray);
+    let calculatedPassengers = Util().calculateTotalNumberOfPassengers(passengersArray);
 
     document.getElementById("calculatedPassengers").innerHTML = "Total number of passengers: " + calculatedPassengers;
 
