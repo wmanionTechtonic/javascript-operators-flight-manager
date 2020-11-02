@@ -1,3 +1,5 @@
+"use strict"
+
 function Flights() {
   function calculateNumberOfFlights(numPassengers, flightCapacity) {
     if (numPassengers !== parseInt(numPassengers, 10))
