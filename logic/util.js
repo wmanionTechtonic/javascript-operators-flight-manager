@@ -19,7 +19,7 @@ function Util() {
       // console.log(parseInt(data, 10));
       // console.log(data);
       console.log(`${data} failed the second test.`);
-      throw new Error("The input should be a number");
+      throw new Error("The input should be a number"); 
     }
   }
 
